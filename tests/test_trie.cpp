@@ -10,14 +10,14 @@ using namespace kata;
 
 BOOST_AUTO_TEST_CASE( EmptyTrieTest)
 {
-    Trie trie;
+    Trie<int> trie;
     bool res = trie.Find( {});
     BOOST_TEST( res == false);
 }
 
 BOOST_AUTO_TEST_CASE( Trie1Test)
 {
-    Trie trie;
+    Trie<int> trie;
     trie.Insert( {1} );
     bool res = trie.Find( {});
     BOOST_TEST( res == false);
@@ -25,7 +25,7 @@ BOOST_AUTO_TEST_CASE( Trie1Test)
 
 BOOST_AUTO_TEST_CASE( Trie2Test)
 {
-    Trie trie;
+    Trie<int> trie;
     trie.Insert( {} );
     bool res = trie.Find( {1});
     BOOST_TEST( res == false);
@@ -33,7 +33,7 @@ BOOST_AUTO_TEST_CASE( Trie2Test)
 
 BOOST_AUTO_TEST_CASE( Trie3Test)
 {
-    Trie trie;
+    Trie<int> trie;
     trie.Insert( {} );
     bool res = trie.Find( {});
     BOOST_TEST( res == true);
@@ -41,7 +41,7 @@ BOOST_AUTO_TEST_CASE( Trie3Test)
 
 BOOST_AUTO_TEST_CASE( Trie3_1Test)
 {
-    Trie trie;
+    Trie<int> trie;
     trie.Insert( {} );
     trie.Clear();
     bool res = trie.Find( {});
@@ -50,7 +50,7 @@ BOOST_AUTO_TEST_CASE( Trie3_1Test)
 
 BOOST_AUTO_TEST_CASE( Trie4Test)
 {
-    Trie trie;
+    Trie<int> trie;
     trie.Insert( {1,2} );
     bool res = trie.Find( {1});
     BOOST_TEST( res == false);
@@ -58,7 +58,7 @@ BOOST_AUTO_TEST_CASE( Trie4Test)
 
 BOOST_AUTO_TEST_CASE( Trie5Test)
 {
-    Trie trie;
+    Trie<int> trie;
     trie.Insert( {1,2} );
     bool res = trie.Find( {1,2});
     BOOST_TEST( res == true);
@@ -66,7 +66,7 @@ BOOST_AUTO_TEST_CASE( Trie5Test)
 
 BOOST_AUTO_TEST_CASE( Trie5_1Test)
 {
-    Trie trie;
+    Trie<int> trie;
     trie.Insert( {1,2} );
     trie.Clear();
     bool res = trie.Find( {1,2});
@@ -75,7 +75,7 @@ BOOST_AUTO_TEST_CASE( Trie5_1Test)
 
 BOOST_AUTO_TEST_CASE( Trie6Test)
 {
-    Trie trie;
+    Trie<int> trie;
     trie.Insert( {1,2} );
     bool res = trie.Find( {1,2,3});
     BOOST_TEST( res == false);
@@ -83,7 +83,7 @@ BOOST_AUTO_TEST_CASE( Trie6Test)
 
 BOOST_AUTO_TEST_CASE( Trie7Test)
 {
-    Trie trie;
+    Trie<int> trie;
     trie.Insert( {1} );
     bool res = trie.Find( {1,2});
     BOOST_TEST( res == false);
@@ -91,7 +91,7 @@ BOOST_AUTO_TEST_CASE( Trie7Test)
 
 BOOST_AUTO_TEST_CASE( Trie8Test)
 {
-    Trie trie;
+    Trie<int> trie;
     trie.Insert( {1,2} );
     bool res = trie.Find( {1,2});
     BOOST_TEST( res == true);
@@ -99,7 +99,7 @@ BOOST_AUTO_TEST_CASE( Trie8Test)
 
 BOOST_AUTO_TEST_CASE( Trie8_1Test)
 {
-    Trie trie;
+    Trie<int> trie;
     trie.Insert( {1,2} );
     trie.Clear();
     bool res = trie.Find( {1,2});
@@ -108,7 +108,7 @@ BOOST_AUTO_TEST_CASE( Trie8_1Test)
 
 BOOST_AUTO_TEST_CASE( Trie9Test)
 {
-    Trie trie;
+    Trie<int> trie;
     trie.Insert( {1,2,3} );
     bool res = trie.Find( {1,2});
     BOOST_TEST( res == false);
@@ -116,7 +116,7 @@ BOOST_AUTO_TEST_CASE( Trie9Test)
 
 BOOST_AUTO_TEST_CASE( Trie10Test)
 {
-    Trie trie;
+    Trie<int> trie;
     trie.Insert( {1,1,1} );
     trie.Insert( {1,1,2} );
     trie.Insert( {1,1,3} );
@@ -126,7 +126,7 @@ BOOST_AUTO_TEST_CASE( Trie10Test)
 
 BOOST_AUTO_TEST_CASE( Trie10_1Test)
 {
-    Trie trie;
+    Trie<int> trie;
     trie.Insert( {1,1,1} );
     trie.Insert( {1,1,2} );
     trie.Insert( {1,1,3} );
@@ -137,7 +137,7 @@ BOOST_AUTO_TEST_CASE( Trie10_1Test)
 
 BOOST_AUTO_TEST_CASE( Trie11Test)
 {
-    Trie trie;
+    Trie<int> trie;
     trie.Insert( {1,1,1} );
     trie.Insert( {1,1,2} );
     trie.Insert( {1,1,3} );
@@ -147,7 +147,7 @@ BOOST_AUTO_TEST_CASE( Trie11Test)
 
 BOOST_AUTO_TEST_CASE( Trie12Test)
 {
-    Trie trie;
+    Trie<int> trie;
     trie.Insert( {1,1,1} );
     trie.Insert( {1,1,1} );
     trie.Insert( {1,1,1} );

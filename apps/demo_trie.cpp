@@ -9,7 +9,7 @@ int main()
 {
     cout << "Trie tree demo" << endl;
 
-    kata::Trie trie;
+    kata::Trie<int> trie;
     trie.Insert( {1, 1, 1} );
     trie.Insert( {1, 1, 2} );
     trie.Insert( {1, 1, 3} );
