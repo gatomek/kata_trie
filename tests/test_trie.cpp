@@ -8,14 +8,14 @@ namespace but = boost::unit_test;
 using namespace std;
 using namespace kata;
 
-BOOST_AUTO_TEST_CASE( EmptyTrieTest)
+BOOST_AUTO_TEST_CASE( EmptyTrieWithEmptySeqTest)
 {
     Trie<int> trie;
     bool res = trie.Find( {});
     BOOST_TEST( res == false);
 }
 
-BOOST_AUTO_TEST_CASE( Trie1Test)
+BOOST_AUTO_TEST_CASE( NotEmptyTrieWithEmptySeqTest)
 {
     Trie<int> trie;
     trie.Insert( {1} );
@@ -23,7 +23,7 @@ BOOST_AUTO_TEST_CASE( Trie1Test)
     BOOST_TEST( res == false);
 }
 
-BOOST_AUTO_TEST_CASE( Trie2Test)
+BOOST_AUTO_TEST_CASE( EmptyTrieWithNotEmptySeqTest)
 {
     Trie<int> trie;
     trie.Insert( {} );
@@ -31,7 +31,7 @@ BOOST_AUTO_TEST_CASE( Trie2Test)
     BOOST_TEST( res == false);
 }
 
-BOOST_AUTO_TEST_CASE( Trie3Test)
+BOOST_AUTO_TEST_CASE( EmptyTrieWithEmptySeqTest)
 {
     Trie<int> trie;
     trie.Insert( {} );
@@ -39,7 +39,7 @@ BOOST_AUTO_TEST_CASE( Trie3Test)
     BOOST_TEST( res == true);
 }
 
-BOOST_AUTO_TEST_CASE( Trie3_1Test)
+BOOST_AUTO_TEST_CASE( EmptyTrieAfterClearingWithEmptySeqTest)
 {
     Trie<int> trie;
     trie.Insert( {} );

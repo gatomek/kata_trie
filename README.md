@@ -1,9 +1,15 @@
 # Trie (prefix tree) implementation
 
-# Functional backlog
-- add delete function
-- convert trie to template
+## Introduction
+This project is an implementation of trie (prefix tree).
 
-# Technical backlog
-- improve complexity of finding existing trie nodes - now it is linear searching
+## Description
+Originally designed for testing results of n-Queens puzzle sequences.
+It allows effective and quick checking if any of the sequence in the solution is duplicated.
+
+### Functional backlog
+- add delete function
+
+### Technical backlog
+- improve time complexity of finding existing trie nodes
 
